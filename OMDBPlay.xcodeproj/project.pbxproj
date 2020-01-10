@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2231F94623C90C6B00EBFB84 /* PosterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2231F94423C90C6B00EBFB84 /* PosterCell.swift */; };
+		2231F94723C90C6B00EBFB84 /* PosterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2231F94523C90C6B00EBFB84 /* PosterCell.xib */; };
 		2248521623C8ECB3006879AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248521523C8ECB3006879AF /* AppDelegate.swift */; };
 		2248521823C8ECB3006879AF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248521723C8ECB3006879AF /* SceneDelegate.swift */; };
 		2248521D23C8ECB3006879AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248521B23C8ECB3006879AF /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		0D8BAF8C3A30C0321F2E5E33 /* Pods-OMDBPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBPlay.debug.xcconfig"; path = "Target Support Files/Pods-OMDBPlay/Pods-OMDBPlay.debug.xcconfig"; sourceTree = "<group>"; };
+		2231F94423C90C6B00EBFB84 /* PosterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCell.swift; sourceTree = "<group>"; };
+		2231F94523C90C6B00EBFB84 /* PosterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterCell.xib; sourceTree = "<group>"; };
 		2248521223C8ECB3006879AF /* OMDBPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMDBPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2248521523C8ECB3006879AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2248521723C8ECB3006879AF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2231F94323C90C3300EBFB84 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				2231F94423C90C6B00EBFB84 /* PosterCell.swift */,
+				2231F94523C90C6B00EBFB84 /* PosterCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 		2248520923C8ECB3006879AF = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,7 @@
 		2248521423C8ECB3006879AF /* OMDBPlay */ = {
 			isa = PBXGroup;
 			children = (
+				2231F94323C90C3300EBFB84 /* Xibs */,
 				2253B32023C8F82F00DCEFBA /* SysLogger */,
 				2253B31923C8F3B000DCEFBA /* ProjectManager */,
 				2248522B23C8EF67006879AF /* Controller */,
@@ -215,6 +229,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2231F94723C90C6B00EBFB84 /* PosterCell.xib in Resources */,
 				2248522223C8ECBB006879AF /* LaunchScreen.storyboard in Resources */,
 				2248521F23C8ECBB006879AF /* Assets.xcassets in Resources */,
 				2248521D23C8ECB3006879AF /* Main.storyboard in Resources */,
@@ -278,6 +293,7 @@
 				2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */,
 				2248521823C8ECB3006879AF /* SceneDelegate.swift in Sources */,
 				2253B32823C8FD2200DCEFBA /* PosterListingModel.swift in Sources */,
+				2231F94623C90C6B00EBFB84 /* PosterCell.swift in Sources */,
 				2253B31B23C8F3F400DCEFBA /* APIHelper.swift in Sources */,
 				2253B31D23C8F73C00DCEFBA /* GlobalConstants.swift in Sources */,
 				2248522D23C8F0BF006879AF /* PosterListVC.swift in Sources */,

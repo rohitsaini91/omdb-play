@@ -81,3 +81,19 @@ extension Data {
         return prettyPrintedString
     }
 }
+
+//MARK: - AutoLayoutCollectionView
+class AutoLayoutCollectionView: UICollectionView {
+  private var shouldInvalidateLayout = false
+  override func layoutSubviews() {
+    super.layoutSubviews()
+    if shouldInvalidateLayout {
+      collectionViewLayout.invalidateLayout()
+      shouldInvalidateLayout = false
+    }
+  }
+  override func reloadData() {
+    shouldInvalidateLayout = true
+    super.reloadData()
+  }
+}

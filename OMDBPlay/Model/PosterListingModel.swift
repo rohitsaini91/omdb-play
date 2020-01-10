@@ -27,8 +27,8 @@ struct PosterListModel: Codable {
 
 // MARK: - Search
 struct Search: Codable {
-    let title, year, imdbID: String
-    let type: TypeEnum?
+    let title, year,type,imdbID: String
+   
     let poster: String
 
     enum CodingKeys: String, CodingKey {
@@ -43,13 +43,10 @@ struct Search: Codable {
         title = try values.decodeIfPresent(String.self, forKey: .title) ?? DocumentDefaultValues.Empty.string
         year = try values.decodeIfPresent(String.self, forKey: .year) ?? DocumentDefaultValues.Empty.string
         imdbID = try values.decodeIfPresent(String.self, forKey: .imdbID) ?? DocumentDefaultValues.Empty.string
-        type = try values.decodeIfPresent(TypeEnum.self, forKey: .type) ?? nil
+        type = try values.decodeIfPresent(String.self, forKey: .type) ?? DocumentDefaultValues.Empty.string
         poster = try values.decodeIfPresent(String.self, forKey: .poster) ?? DocumentDefaultValues.Empty.string
     }
 }
 
-enum TypeEnum: String, Codable {
-    case movie = "movie"
-    case series = "series"
-}
+
 
