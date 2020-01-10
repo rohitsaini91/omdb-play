@@ -29,13 +29,14 @@ extension UIImageView{
             guard cacheType != .memory, cacheType != .disk else {
                 self.image = image
                 self.sainiRemoveLoader()
-                log.success("Media Downloaded Successfully from servers")/
+                log.success("Media Cached from memory")/
+                
                 return
             }
             UIView.transition(with: self, duration: 0.2, options: .transitionCrossDissolve, animations: {
                 self.sainiRemoveLoader()
                 self.image = image
-                log.success("Media Cached from memory")/
+                log.success("Media Downloaded Successfully from servers")/
                 return
             }, completion: nil)
         }

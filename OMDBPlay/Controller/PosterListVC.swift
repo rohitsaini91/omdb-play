@@ -119,7 +119,8 @@ extension PosterListVC: UICollectionViewDelegate,UICollectionViewDataSource{
         log.todo("POSTS: \(postListingData.count)")/
         //preloading
         if indexPath.row == postListingData.count - 2 && postListingData.count < totalPost{
-            posterListing(page: page + 1)
+            page = page + 1
+            posterListing(page: page)
         }
     }
     //MARK: - collectionFlowViewLayout
