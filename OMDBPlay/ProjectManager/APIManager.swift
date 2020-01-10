@@ -72,8 +72,8 @@ public class APIManager {
                 log.result("\(String(describing: response.data?.prettyPrintedJSONString))")/
                 log.ln("prettyJSON End \n")/
                 if let result = response.result.value as? [String:Any]{
-                    if let code = result["code"] as? Int{
-                        if(code == 100){
+                    if let code = result["Response"] as? String{
+                        if(code == "True"){
                             log.success("\(Log.stats()) SUCCESS")/
                             DispatchQueue.main.async {
                                 completion(response.data)
@@ -81,14 +81,14 @@ public class APIManager {
                             return
                         }
                         else{
-                            if let message = result["message"] as? String{
+                            if let message = result["Response"] as? String{
                                 log.error("\(Log.stats()) \(message)")/
                                 UIViewController.top?.view.sainiShowToast(message:message)
                             }
                             return
                         }
                     }
-                    if let message = result["message"] as? String{
+                    if let message = result["Response"] as? String{
                         log.error("\(Log.stats()) \(message)")/
                         UIViewController.top?.view.sainiShowToast(message:message)
                         return
