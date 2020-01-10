@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,11 @@
 		2248522223C8ECBB006879AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2248522023C8ECBB006879AF /* LaunchScreen.storyboard */; };
 		2248522D23C8F0BF006879AF /* PosterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248522C23C8F0BF006879AF /* PosterListVC.swift */; };
 		2248522F23C8F0DC006879AF /* PosterDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2248522E23C8F0DC006879AF /* PosterDetailsVC.swift */; };
+		2253B31B23C8F3F400DCEFBA /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B31A23C8F3F400DCEFBA /* APIHelper.swift */; };
+		2253B31D23C8F73C00DCEFBA /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B31C23C8F73C00DCEFBA /* GlobalConstants.swift */; };
+		2253B31F23C8F7C500DCEFBA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B31E23C8F7C500DCEFBA /* Utility.swift */; };
+		2253B32223C8F87600DCEFBA /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32123C8F87600DCEFBA /* DispatchQueueHelper.swift */; };
+		2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32323C8F8DA00DCEFBA /* Logger.swift */; };
 		98818EF04D0E1715FD2B0747 /* Pods_OMDBPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6F92A0BBD18CB50AB099A5 /* Pods_OMDBPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,11 @@
 		2248522323C8ECBB006879AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2248522C23C8F0BF006879AF /* PosterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterListVC.swift; sourceTree = "<group>"; };
 		2248522E23C8F0DC006879AF /* PosterDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterDetailsVC.swift; sourceTree = "<group>"; };
+		2253B31A23C8F3F400DCEFBA /* APIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
+		2253B31C23C8F73C00DCEFBA /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		2253B31E23C8F7C500DCEFBA /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		2253B32123C8F87600DCEFBA /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
+		2253B32323C8F8DA00DCEFBA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		CA6F92A0BBD18CB50AB099A5 /* Pods_OMDBPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDBPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6C17CCB2379C68115A007C /* Pods-OMDBPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBPlay.release.xcconfig"; path = "Target Support Files/Pods-OMDBPlay/Pods-OMDBPlay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +75,8 @@
 		2248521423C8ECB3006879AF /* OMDBPlay */ = {
 			isa = PBXGroup;
 			children = (
+				2253B32023C8F82F00DCEFBA /* SysLogger */,
+				2253B31923C8F3B000DCEFBA /* ProjectManager */,
 				2248522B23C8EF67006879AF /* Controller */,
 				2248522A23C8EF61006879AF /* View */,
 				2248522923C8EF58006879AF /* Model */,
@@ -101,13 +113,31 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		2253B31923C8F3B000DCEFBA /* ProjectManager */ = {
+			isa = PBXGroup;
+			children = (
+				2253B31A23C8F3F400DCEFBA /* APIHelper.swift */,
+				2253B31C23C8F73C00DCEFBA /* GlobalConstants.swift */,
+				2253B31E23C8F7C500DCEFBA /* Utility.swift */,
+			);
+			path = ProjectManager;
+			sourceTree = "<group>";
+		};
+		2253B32023C8F82F00DCEFBA /* SysLogger */ = {
+			isa = PBXGroup;
+			children = (
+				2253B32123C8F87600DCEFBA /* DispatchQueueHelper.swift */,
+				2253B32323C8F8DA00DCEFBA /* Logger.swift */,
+			);
+			path = SysLogger;
+			sourceTree = "<group>";
+		};
 		2D01510FDA561C99A1FD5EA5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0D8BAF8C3A30C0321F2E5E33 /* Pods-OMDBPlay.debug.xcconfig */,
 				ED6C17CCB2379C68115A007C /* Pods-OMDBPlay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -234,9 +264,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2253B31F23C8F7C500DCEFBA /* Utility.swift in Sources */,
+				2253B32223C8F87600DCEFBA /* DispatchQueueHelper.swift in Sources */,
 				2248522F23C8F0DC006879AF /* PosterDetailsVC.swift in Sources */,
 				2248521623C8ECB3006879AF /* AppDelegate.swift in Sources */,
+				2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */,
 				2248521823C8ECB3006879AF /* SceneDelegate.swift in Sources */,
+				2253B31B23C8F3F400DCEFBA /* APIHelper.swift in Sources */,
+				2253B31D23C8F73C00DCEFBA /* GlobalConstants.swift in Sources */,
 				2248522D23C8F0BF006879AF /* PosterListVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
