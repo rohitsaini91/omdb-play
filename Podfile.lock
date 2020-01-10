@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (4.9.1)
+  - SainiUtils (0.1.0)
+  - SDWebImage (5.4.2):
+    - SDWebImage/Core (= 5.4.2)
+  - SDWebImage/Core (5.4.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - SainiUtils
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - SainiUtils
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  SainiUtils: 886f1659687367dfb712e8050d1001d9b0926043
+  SDWebImage: 4ca2dc4eefae4224bea8f504251cda485a363745
+
+PODFILE CHECKSUM: 4bc6a739305aa716e0dd68d4316a3d16d91b75a5
+
+COCOAPODS: 1.8.3
