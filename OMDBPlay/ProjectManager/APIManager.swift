@@ -58,8 +58,8 @@ public class APIManager {
                 UIViewController.top?.view.sainiShowLoader(loaderColor: AppColors.LoaderColor)
             }
         }
-        log.info("API: \(Log.stats()) \(api)")/
-        Alamofire.request(api, method: .post).responseJSON { (response) in
+        log.info("API: \(Log.stats()) \(api) Working on \(String(describing: DispatchQueue.currentLabel ?? "")) Thread")/
+        Alamofire.request(api, method: .get).responseJSON { (response) in
             
             DispatchQueue.main.async {
                 UIViewController.top?.view.sainiRemoveLoader()

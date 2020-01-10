@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IT1-Zs-odg">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Poster ListVC-->
+        <!--Movie List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="PosterListVC" id="BYZ-38-t0r" customClass="PosterListVC" customModule="OMDBPlay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MTC-9H-I7D">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="j2O-3m-CXx"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="WAZ-Dm-rfo"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="MTC-9H-I7D" secondAttribute="bottom" id="5gx-af-wBL"/>
+                            <constraint firstItem="MTC-9H-I7D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BTC-zf-k2T"/>
+                            <constraint firstItem="MTC-9H-I7D" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VPB-Sd-vmM"/>
+                            <constraint firstAttribute="trailing" secondItem="MTC-9H-I7D" secondAttribute="trailing" id="cTD-6l-SME"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="d2s-9o-IIS"/>
+                    <navigationItem key="navigationItem" title="Movie List" id="d2s-9o-IIS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1045.9821428571429" y="85.507246376811594"/>
         </scene>
         <!--Poster DetailsVC-->
         <scene sceneID="xj8-lc-S9I">
