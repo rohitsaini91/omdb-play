@@ -19,6 +19,8 @@
 		2253B31F23C8F7C500DCEFBA /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B31E23C8F7C500DCEFBA /* Utility.swift */; };
 		2253B32223C8F87600DCEFBA /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32123C8F87600DCEFBA /* DispatchQueueHelper.swift */; };
 		2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32323C8F8DA00DCEFBA /* Logger.swift */; };
+		2253B32623C8F9BB00DCEFBA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32523C8F9BB00DCEFBA /* APIManager.swift */; };
+		2253B32823C8FD2200DCEFBA /* PosterListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32723C8FD2200DCEFBA /* PosterListingModel.swift */; };
 		98818EF04D0E1715FD2B0747 /* Pods_OMDBPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6F92A0BBD18CB50AB099A5 /* Pods_OMDBPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +40,8 @@
 		2253B31E23C8F7C500DCEFBA /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		2253B32123C8F87600DCEFBA /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
 		2253B32323C8F8DA00DCEFBA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		2253B32523C8F9BB00DCEFBA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2253B32723C8FD2200DCEFBA /* PosterListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterListingModel.swift; sourceTree = "<group>"; };
 		CA6F92A0BBD18CB50AB099A5 /* Pods_OMDBPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDBPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6C17CCB2379C68115A007C /* Pods-OMDBPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBPlay.release.xcconfig"; path = "Target Support Files/Pods-OMDBPlay/Pods-OMDBPlay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +86,6 @@
 				2248522923C8EF58006879AF /* Model */,
 				2248521523C8ECB3006879AF /* AppDelegate.swift */,
 				2248521723C8ECB3006879AF /* SceneDelegate.swift */,
-				2248521B23C8ECB3006879AF /* Main.storyboard */,
 				2248521E23C8ECBB006879AF /* Assets.xcassets */,
 				2248522023C8ECBB006879AF /* LaunchScreen.storyboard */,
 				2248522323C8ECBB006879AF /* Info.plist */,
@@ -93,6 +96,7 @@
 		2248522923C8EF58006879AF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2253B32723C8FD2200DCEFBA /* PosterListingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +104,7 @@
 		2248522A23C8EF61006879AF /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2248521B23C8ECB3006879AF /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 				2253B31A23C8F3F400DCEFBA /* APIHelper.swift */,
 				2253B31C23C8F73C00DCEFBA /* GlobalConstants.swift */,
 				2253B31E23C8F7C500DCEFBA /* Utility.swift */,
+				2253B32523C8F9BB00DCEFBA /* APIManager.swift */,
 			);
 			path = ProjectManager;
 			sourceTree = "<group>";
@@ -266,10 +272,12 @@
 			files = (
 				2253B31F23C8F7C500DCEFBA /* Utility.swift in Sources */,
 				2253B32223C8F87600DCEFBA /* DispatchQueueHelper.swift in Sources */,
+				2253B32623C8F9BB00DCEFBA /* APIManager.swift in Sources */,
 				2248522F23C8F0DC006879AF /* PosterDetailsVC.swift in Sources */,
 				2248521623C8ECB3006879AF /* AppDelegate.swift in Sources */,
 				2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */,
 				2248521823C8ECB3006879AF /* SceneDelegate.swift in Sources */,
+				2253B32823C8FD2200DCEFBA /* PosterListingModel.swift in Sources */,
 				2253B31B23C8F3F400DCEFBA /* APIHelper.swift in Sources */,
 				2253B31D23C8F73C00DCEFBA /* GlobalConstants.swift in Sources */,
 				2248522D23C8F0BF006879AF /* PosterListVC.swift in Sources */,

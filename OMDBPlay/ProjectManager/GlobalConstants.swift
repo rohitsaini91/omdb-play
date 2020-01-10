@@ -23,3 +23,8 @@ struct DocumentDefaultValues{
     }
 }
 
+  //MARK:- AppColors
+struct AppColors{
+    static let LoaderColor =  UIColor.darkGray
+}
+
