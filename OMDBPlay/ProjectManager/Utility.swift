@@ -98,3 +98,28 @@ class AutoLayoutCollectionView: UICollectionView {
     super.reloadData()
   }
 }
+
+//MARK:- yearAgo
+public func yearAgo(year: String) -> String{
+    let getYear = year.prefix(4)
+    let releaseYear = Int(String(getYear)) ?? 0
+    let date = Date()
+    let calendar = Calendar.current
+    let currentYear = calendar.component(.year, from: date)
+    var yearAgoString = ""
+    let yearsAgo = currentYear - releaseYear
+    //ago
+    if currentYear > releaseYear{
+        yearAgoString = "\(yearsAgo) years ago."
+    }
+    //coming year
+    else if currentYear < releaseYear{
+        yearAgoString = "Coming Soon"
+    }
+    //this year
+    else{
+       yearAgoString = "This Year"
+    }
+    
+    return yearAgoString
+}
