@@ -52,7 +52,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Movie List" id="d2s-9o-IIS"/>
                     <connections>
-                        <outlet property="collectionView" destination="for-Vk-N8Q" id="I1c-pb-jgM"/>
+                        <outlet property="collectionView" destination="for-Vk-N8Q" id="IoI-pz-6kd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

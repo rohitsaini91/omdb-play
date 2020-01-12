@@ -20,6 +20,8 @@ class PosterCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLbl: UILabel!
     
+    
+    //setting the poster data
     var posterData: Search!{
         didSet{
             posterPic.sainiTapToChangeColor()
@@ -39,6 +41,7 @@ class PosterCell: UICollectionViewCell {
     
     
     //MARK:-configUI
+    //configuring the cell ui
     private func configUI(){
         posterPic.layer.cornerRadius = 10
         typeView.layer.cornerRadius = 10

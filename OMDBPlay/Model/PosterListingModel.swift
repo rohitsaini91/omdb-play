@@ -17,6 +17,7 @@ struct PosterListModel: Codable {
         case totalResults
         case response = "Response"
     }
+    //Default values if data is missing
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         search = try values.decodeIfPresent([Search].self, forKey: .search) ?? []
@@ -38,6 +39,7 @@ struct Search: Codable {
         case type = "Type"
         case poster = "Poster"
     }
+     //Default values if data is missing
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         title = try values.decodeIfPresent(String.self, forKey: .title) ?? DocumentDefaultValues.Empty.string

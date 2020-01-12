@@ -19,6 +19,7 @@ class PosterDetailsCell: UITableViewCell {
     @IBOutlet weak var posterPic: UIImageView!
     @IBOutlet weak var imdbView: UIView!
     
+    //setting the poster details
     var posterDetailsData: Search!{
         didSet{
         posterPic.downloadCachedImage(placeholder: "", urlString: posterDetailsData.poster)
@@ -35,6 +36,7 @@ class PosterDetailsCell: UITableViewCell {
     }
 
     
+    //MARK:- configUI
     private func configUI(){
           typeView.layer.cornerRadius = 10
           typeView.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)

@@ -34,8 +34,17 @@ public class APIManager {
         return (isReachable && !needsConnection)
     }
     
+    //MARK:- checkInternetConnection
+    func checkInternetConnection() -> Bool{
+        if !APIManager.isConnectedToNetwork(){
+            return false
+        }
+        else{
+            return true
+        }
+    }
     
-    
+    //network error message
     func networkErrorMsg()
     {
         log.error("You are not connected to the internet")/
@@ -53,6 +62,7 @@ public class APIManager {
             return
         }
         
+        //showing loader
         if Loader == true{
             DispatchQueue.main.async {
                 UIViewController.top?.view.sainiShowLoader(loaderColor: AppColors.LoaderColor)
@@ -61,11 +71,13 @@ public class APIManager {
         log.info("API: \(Log.stats()) \(api) Working on \(String(describing: DispatchQueue.currentLabel ?? "")) Thread")/
         Alamofire.request(api, method: .get).responseJSON { (response) in
             
+            //remove  loader
             DispatchQueue.main.async {
                 UIViewController.top?.view.sainiRemoveLoader()
             }
             
             switch response.result {
+            //success reponse
             case .success:
                 log.result("\(String(describing: response.result.value))")/
                 log.ln("prettyJSON Start \n")/
@@ -100,6 +112,7 @@ public class APIManager {
                     UIViewController.top?.view.sainiShowToast(message:error.localizedDescription)
                     return
                 }
+            //failure response
             case .failure(let error):
                 log.error("\(Log.stats()) \(error)")/
                 UIViewController.top?.view.sainiShowToast(message:"Server Error please check server logs.")

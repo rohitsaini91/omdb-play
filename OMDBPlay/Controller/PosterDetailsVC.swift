@@ -10,6 +10,7 @@ import UIKit
 
 class PosterDetailsVC: UIViewController {
     
+    //OUTLETS
     @IBOutlet weak var tableView: UITableView!
     var posterDetailsData: Search!
     override func viewDidLoad() {
@@ -19,6 +20,7 @@ class PosterDetailsVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //MARK:- configUI
     private func configUI(){
         tableView.register(UINib(nibName: "PosterDetailsCell", bundle: nil), forCellReuseIdentifier: "PosterDetailsCell")
         tableView.estimatedRowHeight = UITableView.automaticDimension

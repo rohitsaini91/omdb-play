@@ -11,6 +11,7 @@ import UIKit
 class PosterListVC: UIViewController,UICollectionViewDelegateFlowLayout {
 
     
+    //OUTLETS
     @IBOutlet weak var collectionView: AutoLayoutCollectionView!
     private var postListingData: [Search] = [Search]()
     private var isLandscape: Bool = false
@@ -33,6 +34,7 @@ class PosterListVC: UIViewController,UICollectionViewDelegateFlowLayout {
         collectionView.collectionViewLayout = flowLayout
     }
     
+    //Detecting the device orientation changes
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         if UIDevice.current.orientation.isLandscape {
@@ -122,6 +124,7 @@ extension PosterListVC: UICollectionViewDelegate,UICollectionViewDataSource{
        
     }
     
+    //PAGINATION
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         log.todo("POSTS: \(postListingData.count)")/
         //preloading
