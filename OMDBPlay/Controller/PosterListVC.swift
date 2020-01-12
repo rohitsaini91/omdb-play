@@ -13,6 +13,7 @@ class PosterListVC: UIViewController,UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var collectionView: AutoLayoutCollectionView!
     private var postListingData: [Search] = [Search]()
+    private var isLandscape: Bool = false
     
     //pagination variables
     private var totalPost: Int = 0
@@ -36,11 +37,13 @@ class PosterListVC: UIViewController,UICollectionViewDelegateFlowLayout {
         super.viewWillTransition(to: size, with: coordinator)
         if UIDevice.current.orientation.isLandscape {
             log.success("Landscape")/
+            isLandscape = true
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
         } else {
             log.success("Portrait")/
+            isLandscape = false
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
@@ -131,8 +134,13 @@ extension PosterListVC: UICollectionViewDelegate,UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellH : CGFloat = collectionView.frame.size.height - 10
         let cellW : CGFloat = collectionView.frame.size.width - 10
+        if isLandscape{
+            return CGSize(width: cellW / 2, height: cellH)
+        }
+        else{
+            return CGSize(width: cellW / 2, height: cellH / 2)
+        }
         
-        return CGSize(width: cellW / 2, height: cellH / 2)
     }
 
 }
