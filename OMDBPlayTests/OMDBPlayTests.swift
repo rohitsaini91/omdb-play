@@ -27,7 +27,12 @@ class OMDBPlayTests: XCTestCase {
         XCTAssertNotNil(vc.collectionView)
     }
     
-   
+    //Testing PosterDetails VC Table view init successfully or not
+   func testInitMyTableView(){
+       let vc = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "PosterDetailsVC") as! PosterDetailsVC
+       _ = vc.view
+       XCTAssertNotNil(vc.tableView)
+   }
     
     
 }
