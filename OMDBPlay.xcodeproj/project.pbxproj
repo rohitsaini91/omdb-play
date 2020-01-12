@@ -23,6 +23,8 @@
 		2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32323C8F8DA00DCEFBA /* Logger.swift */; };
 		2253B32623C8F9BB00DCEFBA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32523C8F9BB00DCEFBA /* APIManager.swift */; };
 		2253B32823C8FD2200DCEFBA /* PosterListingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2253B32723C8FD2200DCEFBA /* PosterListingModel.swift */; };
+		22E2411523CB0952005060CD /* PosterDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E2411323CB0952005060CD /* PosterDetailsCell.swift */; };
+		22E2411623CB0952005060CD /* PosterDetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E2411423CB0952005060CD /* PosterDetailsCell.xib */; };
 		98818EF04D0E1715FD2B0747 /* Pods_OMDBPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA6F92A0BBD18CB50AB099A5 /* Pods_OMDBPlay.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		2253B32323C8F8DA00DCEFBA /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		2253B32523C8F9BB00DCEFBA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		2253B32723C8FD2200DCEFBA /* PosterListingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterListingModel.swift; sourceTree = "<group>"; };
+		22E2411323CB0952005060CD /* PosterDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterDetailsCell.swift; sourceTree = "<group>"; };
+		22E2411423CB0952005060CD /* PosterDetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosterDetailsCell.xib; sourceTree = "<group>"; };
 		CA6F92A0BBD18CB50AB099A5 /* Pods_OMDBPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OMDBPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED6C17CCB2379C68115A007C /* Pods-OMDBPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OMDBPlay.release.xcconfig"; path = "Target Support Files/Pods-OMDBPlay/Pods-OMDBPlay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +71,8 @@
 			children = (
 				2231F94423C90C6B00EBFB84 /* PosterCell.swift */,
 				2231F94523C90C6B00EBFB84 /* PosterCell.xib */,
+				22E2411323CB0952005060CD /* PosterDetailsCell.swift */,
+				22E2411423CB0952005060CD /* PosterDetailsCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 				2248522223C8ECBB006879AF /* LaunchScreen.storyboard in Resources */,
 				2248521F23C8ECBB006879AF /* Assets.xcassets in Resources */,
 				2248521D23C8ECB3006879AF /* Main.storyboard in Resources */,
+				22E2411623CB0952005060CD /* PosterDetailsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +295,7 @@
 				2253B31F23C8F7C500DCEFBA /* Utility.swift in Sources */,
 				2253B32223C8F87600DCEFBA /* DispatchQueueHelper.swift in Sources */,
 				2253B32623C8F9BB00DCEFBA /* APIManager.swift in Sources */,
+				22E2411523CB0952005060CD /* PosterDetailsCell.swift in Sources */,
 				2248522F23C8F0DC006879AF /* PosterDetailsVC.swift in Sources */,
 				2248521623C8ECB3006879AF /* AppDelegate.swift in Sources */,
 				2253B32423C8F8DA00DCEFBA /* Logger.swift in Sources */,

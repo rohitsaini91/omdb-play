@@ -10,44 +10,44 @@ import UIKit
 
 class PosterDetailsVC: UIViewController {
     
-    
-
-    @IBOutlet weak var idLbl: UILabel!
-    @IBOutlet weak var releaseDataLbl: UILabel!
-    @IBOutlet weak var posterTitle: UILabel!
-    @IBOutlet weak var typeLbl: UILabel!
-    @IBOutlet weak var typeView: UIView!
-    @IBOutlet weak var posterPic: UIImageView!
-    
-    
+    @IBOutlet weak var tableView: UITableView!
     var posterDetailsData: Search!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configUI()
+       
         // Do any additional setup after loading the view.
     }
     
-    
     private func configUI(){
-        typeView.layer.cornerRadius = 10
-        typeView.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
-        posterPic.downloadCachedImage(placeholder: "", urlString: posterDetailsData.poster)
-        posterTitle.text = posterDetailsData.title
-        typeLbl.text = posterDetailsData.type
-        releaseDataLbl.text = posterDetailsData.year
-        idLbl.text = posterDetailsData.imdbID
+        tableView.register(UINib(nibName: "PosterDetailsCell", bundle: nil), forCellReuseIdentifier: "PosterDetailsCell")
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
     }
     
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//MARK:- Tableview Delegate and Datasourece
+extension PosterDetailsVC: UITableViewDelegate,UITableViewDataSource{
+    // estimatedHeightForRowAt
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
-    */
-
+    
+    // heightForRowAt
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PosterDetailsCell", for: indexPath) as? PosterDetailsCell else{
+            return UITableViewCell()
+        }
+        cell.posterDetailsData = posterDetailsData
+        return cell
+    }
 }
