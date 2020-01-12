@@ -107,11 +107,15 @@ extension PosterListVC: UICollectionViewDelegate,UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PosterCell", for: indexPath) as? PosterCell else{
             return UICollectionViewCell()
         }
+        
         cell.posterData = postListingData[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc: PosterDetailsVC = STORYBOARD.MAIN.instantiateViewController(withIdentifier: "PosterDetailsVC") as! PosterDetailsVC
+        vc.posterDetailsData = postListingData[indexPath.row]
+        self.navigationController?.pushViewController(vc, animated: true)
        
     }
     
